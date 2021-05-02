@@ -1,2 +1,2 @@
-# personal-web-site
+# Personal Web Site
 Blog &amp; Portfolio Website
