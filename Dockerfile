@@ -1,7 +1,9 @@
-  
-FROM python:stretch
+# gunicorn-flask
 
-COPY . /app
+FROM python:3.8
+
+Run mkdir /deploy-app
+COPY . /deploy-app
 WORKDIR /app
 
 RUN pip install --upgrade pip
