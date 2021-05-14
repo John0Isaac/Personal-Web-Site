@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- meta -->
+    <meta name="description" content="Personal Blog & Portfolio">
+    <meta name="author" content="John Isaac">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- /meta -->
+
+    <!-- styles -->
+    <link type="text/css" rel="stylesheet" href="/static/css/styles.css">
+    <!-- /styles-->
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="/static/ico/favicon.ico">
+    <!-- /favicons -->
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <h1>
+            <a href="#">J</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="uses.html">Uses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <a href="https://twitter.com/john00isaac" target="_blank">
+            <img align="right" alt="John Aziz | Twitter" title="Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />
+        </a>
+        <a href="https://www.facebook.com/john0isaac/" target="_blank">
+            <img align="right" alt="John's Facebook" title="Facebook" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" />
+        </a>
+        <a href="https://www.linkedin.com/in/john0isaac/" target="_blank">
+            <img align="right" alt="John's LinkedIn" title="LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+        </a>
+        <a href="https://www.github.com/John0Isaac/" target="_blank">
+            <img align="right" alt="John's GitHub" title="GitHub" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" />
+        </a>
+    </footer>
+</body>
+
+</html>
