@@ -1,0 +1,45 @@
+* {
+    color: #2d3748;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin-top: 5em;
+    margin-bottom: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+#nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.introduction {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+#introduction-text {
+    width: 40%;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 1px;
+    overflow: hidden;
+}
+
+#nav li {
+    font-size: medium;
+    float: left;
+}
+
+#nav li a {
+    display: block;
+    text-align: left;
+    padding: 15px 17px;
+    text-decoration: none;
+}
