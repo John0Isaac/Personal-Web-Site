@@ -21,7 +21,7 @@ def create_app(test_config=None):
     @app.route("/about")
     def about_page():
         return render_template('pages/about.html')
-    
+
     @app.route("/blogs")
     def blogs_page():
         return render_template('pages/blogs.html')
@@ -33,6 +33,10 @@ def create_app(test_config=None):
     @app.route("/uses")
     def uses_page():
         return render_template('pages/uses.html')
+
+    @app.route("/.well-known/pki-validation/godaddy.html")
+    def go_page():
+        return render_template('pages/godaddy.html')
 
     return app
 
