@@ -1,52 +1,39 @@
 {% extends 'layouts/main.html' %} {% block title %}John Aziz{% endblock %} {% block content %}
-<main>
-    <section class="introduction flex">
+<main class="h-full min-h-full">
+    <section class="introduction flex mb-24 container mx-auto px-10 pt-24">
         <div id="introduction-text">
-            <p>👋🏼 Hi, I'm</p>
-            <h1>John
+            <p class="text-2xl">👋🏼 Hi, I'm</p>
+            <h1 class="text-5xl font-medium">John
                 <br>Aziz</h1>
-            <p>Computer Engineering student at Modern Academy for Engineering, GDSC Lead, Beta MLSA, GDG Cloud Egypt Team Member, Full-Stack Developer Nanodegree Graduate.
+            <p class="text-xl">Computer Engineering student at Modern Academy for Engineering, GDSC Lead, Beta MLSA, GDG Cloud Egypt Team Member, Full-Stack Developer Nanodegree Graduate.
                 <br>Recently, I developed an interest in Machine Learning and Google Apps Script.</p>
         </div>
         <div>
-            <img style="width:50%;border:none;height:50%;" align="right" src="/static/img/john-circle.png" alt="My photo">
+            <img style="width:70%;border:none;height:70%;" align="right" src="/static/img/john-circle.png" alt="My photo">
         </div>
     </section>
-    <section class="recent-videos">
-        <h2>Recent Videos</h2>
-        <div class="grid gap-y-10 gap-x-10 grid-cols-2">
+    <section class="container mx-auto px-10 my-20">
+        <h2 class="text-4xl font-medium">Recent Videos</h2>
+        <div class="grid gap-y-10 gap-x-10 grid-cols-1 grid-cols-2">
             <div>
-                <a class="flex flex-col flex-grow rounded" href="https://www.youtube.com/watch?v=1ZBFaoxHNvc" target="_blank">
+                <a class="flex flex-col flex-grow rounded text-primary py-5 my-5" href="https://www.youtube.com/watch?v=1ZBFaoxHNvc" target="_blank">
                     <img class="rounded" src="https://img.youtube.com/vi/1ZBFaoxHNvc/maxresdefault.jpg" alt="Video thumbnail">
-                    <h2>Git & GitHub & Version Control</h2>
+                    <h2 class="text-2xl my-5 font-medium">Git & GitHub & Version Control</h2>
                 </a>
             </div>
             <div>
-                <a class="flex flex-col flex-grow rounded" href="https://www.youtube.com/watch?v=M_prf8cCyH8" target="_blank">
+                <a class="flex flex-col flex-grow rounded text-primary py-5 my-5" href="https://www.youtube.com/watch?v=M_prf8cCyH8" target="_blank">
                     <img class="rounded" src="https://img.youtube.com/vi/M_prf8cCyH8/maxresdefault.jpg" alt="Video thumbnail">
-                    <h2>Deploying Applications to Google Cloud</h2>
+                    <h2 class="text-2xl my-5 font-medium">Deploying Applications to Google Cloud</h2>
                 </a>
             </div>
         </div>
-        <a href="/talks">View All Videos →</a>
+        <a class="text-lg" href="/talks">View All Videos →</a>
     </section>
-    <section class="featured-posts">
-        <h2>Featured Posts</h2>
-        <div>
-            <a href="/blogs" target="_blank">
-                <h2>How to mam</h2>
-                <p>It's like magic.</p>
-                <ul>
-                    <li>re</li>
-                </ul>
-            </a>
-        </div>
-        <a href="/blogs">View All Posts →</a>
-    </section>
-    <section>
-        <h1>That's it! Now It's your turn to say hi.</h1>
-        <p>
-            I hope To hear from you! <span><a href="mailto:hey@jaziz.codes">hey@jaziz.codes</a></span>
+    <section class="px-12 py-24 flex flex-col items-center justify-center mx-auto text-center">
+        <h1 class="text-4xl font-medium w-full">That's it! Now It's your turn to say hi.</h1>
+        <p class="text-xl">
+            I hope To hear from you! <span><a href="mailto:hey@jaziz.codes" class="text-xl font-medium my-12">hey@jaziz.codes</a></span>
         </p>
     </section>
 </main>

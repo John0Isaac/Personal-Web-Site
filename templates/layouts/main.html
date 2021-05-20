@@ -20,23 +20,24 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header id="header">
-        <nav class="flex" id="nav">
-            <ul>
-                <li><a href="/">J</a></li>
-                <li><a href="/blogs">Blog</a></li>
-                <li><a href="/talks">Talks</a></li>
-                <li><a href="https://www.youtube.com/channel/UCJwxtw-l_nibkU54ZbVW8xw" target="_blank">Youtube</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/uses">Uses</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="text-primary bg-primary py-20">
+        <!-- Header -->
+        <header class="hidden md:inline mx-auto max-w-screen-xl h-24 overflow-hidden sticky top-0 bg-primary z-10">
+            <nav class="px-10 mt-auto h-full flex items-center justify-start text-primary" id="nav">
+                <ul class="flex flex-grow text-lg items-center">
+                    <li><a href="/">J</a></li>
+                    <li><a href="/blogs">Blog</a></li>
+                    <li><a href="/talks">Talks</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCJwxtw-l_nibkU54ZbVW8xw" target="_blank">Youtube</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/uses">Uses</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    {% block content %}{% endblock %}
-
-    <footer>
+        {% block content %}{% endblock %}
+    </div>
+    <footer clas="pt-24 pb-5 flex-col-reverse items-center flex justify-around mx-auto bg-primary">
         <p>©
             <!-- -->2021
             <!-- -->John Aziz
