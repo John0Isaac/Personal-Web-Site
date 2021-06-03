@@ -34,6 +34,10 @@ def create_app(test_config=None):
     def uses_page():
         return render_template('pages/uses.html')
 
+    @app.route("/resume")
+    def resume_page():
+        return render_template('pages/resume.html')
+
     return app
 
 
