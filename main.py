@@ -37,6 +37,26 @@ def create_app(test_config=None):
     @app.route("/resume")
     def resume_page():
         return render_template('pages/resume.html')
+    
+    @app.route("/facebook")
+    def facebook_link():
+        return "https://www.facebook.com/john0isaac"
+    
+    @app.route("/github")
+    def github_link():
+        return "https://github.com/John0Isaac"
+    
+    @app.route("/linkedin")
+    def linkedin_link():
+        return "https://www.linkedin.com/in/john0isaac"
+    
+    @app.route("/twitter")
+    def twitter_link():
+        return "https://twitter.com/john00isaac"
+    
+    @app.route("/instagram")
+    def instagram_link():
+        return "https://www.instagram.com/john0isaac"
 
     return app
 
