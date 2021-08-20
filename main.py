@@ -41,9 +41,18 @@ def create_app(test_config=None):
     def about_page():
         return render_template('pages/about.html')
 
-    @app.route("/blogs")
+    @app.route("/blog")
     def blogs_page():
         return render_template('pages/blogs.html')
+
+    @app.route("/blog/<int:id>", methods=['GET'])
+    def retrieve_blog(id):
+        if id == 1:
+            return render_template('pages/blogs/1.html')
+        elif id == 2:
+            return render_template('pages/blogs/2.html')
+        else:
+            abort(404)
 
     @app.route("/talks")
     def talks_page():
@@ -54,9 +63,7 @@ def create_app(test_config=None):
         diaries = Diaries.query.order_by(Diaries.id).all()
         current_diaries = paginate_results(request, diaries)
 
-        if len(current_diaries) == 0:
-            abort(404)
-        return jsonify({
+        return render_template('pages/diaries.html', data={
             'sucess': True,
             'diaries': current_diaries,
             'total_diaries': len(Diaries.query.all())
@@ -67,7 +74,7 @@ def create_app(test_config=None):
             diary = Diaries.query.get(id)
             if not diary:
                 abort(404)
-            return jsonify({
+            return render_template('pages/diary.html', data={
                 'sucess': True,
                 'diary': diary.format()
             }), 200
@@ -84,7 +91,7 @@ def create_app(test_config=None):
 
             diary = Diaries(title=new_title, category=new_category, content=new_content, date=new_date, feeling=new_feeling)
             diary.insert()
-            return jsonify({
+            return render_template('pages/diary.html', data={
                 'sucess': True,
                 'diary': diary.format()
             }), 200
@@ -108,7 +115,7 @@ def create_app(test_config=None):
             diary.feeling = new_feeling
             
             diary.update()
-            return jsonify({
+            return render_template('pages/diary.html', data={
                 'sucess': True,
                 'diary': diary.id
             }), 200
@@ -121,7 +128,7 @@ def create_app(test_config=None):
         if diary:
             diary.delete()
 
-            return jsonify({
+            return render_template('pages/diaries.html', data={
             'sucess': True,
             'delete': id
         }), 200
@@ -134,7 +141,7 @@ def create_app(test_config=None):
         search = "%{}%".format(term.lower())
         diaries = Diaries.query.order_by(Diaries.id).filter(or_(Diaries.title.ilike(search),Diaries.category.ilike(search), Diaries.content.ilike(search) ))
         current_diaries = paginate_results(request, diaries)
-        return jsonify({
+        return render_template('pages/diaries.html', data={
             'sucess': True,
             'diries': current_diaries,
             'total_diaries': len(diaries.all())
@@ -178,10 +185,11 @@ def create_app(test_config=None):
 
     @app.errorhandler(404)
     def not_found(error):
-        return jsonify({
+        return render_template('/pages/error.html', data={
             'success': False,
             'error': 404,
-            'message': 'resourse not found'
+            'description': 'Sorry but the page you are looking for does not exist, have been removed, name changed or is temporarily unavailable.',
+            'message': 'Page Not Be Found'
         }), 404
 
     @app.errorhandler(405)
