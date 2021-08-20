@@ -1,9 +1,46 @@
-{% extends 'layouts/main.html' %} {% block title %}Under Construction{% endblock %} {% block content %}
+{% extends 'layouts/main.html' %} {% block title %}Blog{% endblock %} {% block content %}
 <main class="h-full min-h-full">
     <div>
-        <div class="container mx-auto px-10 pt-24 lg-px-32">
-            <h1>Sorry, This part is still under construction.</h1>
+        <div class="container mx-auto lg-px-32 px-10 pb-32">
+            <h2 class="text-5xl w-text-6xl font-medium tracking-wide mb-3 text-center">Blog</h2>
+            <p class="mb-16 text-center text-xl font-normal">Articles about my experience and the things I learn</p>
+            <ul class="grid lg-grid-cols-3 gap-x-10 gap-y-10 grid-cols-1 w-grid-cols-2">
+                <li>
+                    <a href="/blog/1">
+                        <div class="bg-card shadow-md rounded p-5 flex flex-col">
+                            <h1 class="text-accent text-2xl font-medium mb-3">From being Rejected as GDSC Lead to Top MENA</h1>
+                            <p class="text-lg mb-5 flex-grow">Reflections about my journey as a Google Developer Student Club Community Leader for the past year</p>
+                            <ul>
+                                <li>
+                                    <span class="text-sm rounded-full bg-accent px-3 py-1 mr-2 my-10">GDSC</span>
+                                    <span class="text-sm rounded-full bg-accent px-3 py-1 mr-2 my-10">Personal Growth</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog/2">
+                        <div class="bg-card shadow-md rounded p-5 flex flex-col">
+                            <h1 class="text-accent text-2xl font-medium mb-3">Organizing the MEGA events around MENA & Egypt</h1>
+                            <p class="text-lg mb-5 flex-grow">Reflections about the process of organizing and managing events on a large scale</p>
+                            <ul>
+                                <li>
+                                    <span class="text-sm rounded-full bg-accent px-3 py-1 mr-2 my-10">GDSC</span>
+                                    <span class="text-sm rounded-full bg-accent px-3 py-1 mr-2 my-10">Personal Growth</span>
+                                    <span class="text-sm rounded-full bg-accent px-3 py-1 mr-2 my-10">Event Organizing</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </main>
 {% endblock %}
+{% block script %}
+<script>
+    
+</script>
+{% endblock %} 

@@ -1,0 +1,18 @@
+{% extends 'layouts/main.html' %} {% block title %} Error {{ data.error }}{% endblock %} {% block content %}
+<main class="h-full min-h-full">
+    <div>
+        <div class="container mx-auto px-10 pt-24 lg-px-32">
+            <div id="notfound">
+                <div class="notfound">
+                    <div class="notfound-404">
+                        <h1>{{data.error}}</h1>
+                        <h2>Oops! {{data.message}}</h2>
+                        <p>{{data.description}}</p>
+                        <a href="javascript:history.back()" class="text-decoration-none text-accent">Go Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
