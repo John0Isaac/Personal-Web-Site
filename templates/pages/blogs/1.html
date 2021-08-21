@@ -1,4 +1,15 @@
-{% extends 'layouts/main.html' %} {% block title %}John Aziz | Blog{% endblock %} {% block content %}
+{% extends 'layouts/main.html' %} {% block title %}John Aziz | Blog{% endblock %} 
+{% block meta %} 
+<meta property="og:url" content="https://johnaziz.com/blog/1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="From being Rejected as GDSC Lead to Top MENA">
+<meta property="og:description" content="Reflections about my journey as a Google Developer Student Club Community Leader for the past year">
+<meta property="og:image" content="https://johnaziz.com/static/img/blog1/top-mena-certificate-cover.png">
+<meta property="og:image:alt" content="From being Rejected as GDSC Lead to Top MENA">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1500">
+{% endblock %}
+{% block content %}
 <main class="h-full min-h-full">
     <div class="mx-auto container px-2 w-px-16">
         <div class="flex justify-center pb-12">
