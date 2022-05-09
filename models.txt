@@ -1,7 +1,3 @@
-from sqlalchemy import Column, String, Integer, DateTime
-from flask_sqlalchemy import SQLAlchemy
-import os
-
 
 # For using locally
 #database_name = 'personal_web_site'

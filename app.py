@@ -1,7 +1,6 @@
 from flask import Flask, request, render_template, redirect, abort, jsonify
 from flask_cors import CORS
 from datetime import datetime, timezone
-from models import setup_db, Diaries
 from sqlalchemy import or_
 
 
@@ -22,7 +21,7 @@ def paginate_results(request, selection):
 def create_app(test_config=None):
     # Create and configure the app
     app = Flask(__name__)
-    setup_db(app)
+    #setup_db(app)
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     # CORS Headers
@@ -53,7 +52,7 @@ def create_app(test_config=None):
             return render_template('pages/blogs/2.html')
         else:
             abort(404)
-
+    """
     @app.route("/talks")
     def talks_page():
         return render_template('pages/talks.html')
@@ -146,7 +145,7 @@ def create_app(test_config=None):
             'diries': current_diaries,
             'total_diaries': len(diaries.all())
             }), 200
-    
+    """
     @app.route("/resume")
     def resume_page():
         return render_template('pages/resume.html')
