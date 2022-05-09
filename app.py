@@ -52,11 +52,11 @@ def create_app(test_config=None):
             return render_template('pages/blogs/2.html')
         else:
             abort(404)
-    """
+    
     @app.route("/talks")
     def talks_page():
         return render_template('pages/talks.html')
-
+    """
     @app.route("/diaries")
     def retrieve_diaries():
         diaries = Diaries.query.order_by(Diaries.id).all()
